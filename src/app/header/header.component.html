@@ -16,7 +16,11 @@
                     appDropdown>
                     <a style="cursor: pointer;" class="dropdown-toggle" role="button">Mannage <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li style="cursor: pointer;"><a>Save Date</a></li>
+                            <li 
+                                style="cursor: pointer;" 
+                                (click)="onSaveData()">
+                                    <a>Save Date</a>
+                            </li>
                             <li style="cursor: pointer;"><a>Fetch Data</a></li>
                         </ul>
                 </li> 
