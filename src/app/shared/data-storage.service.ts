@@ -10,9 +10,14 @@ constructor(private http: Http,
             private recipeService: RecipeService) {} 
 
 storeRecipes() {
-    this.http.put(
+    return this.http.put(
         'https://ng-recipe-http.firebaseio.com/recipes.json',
         this.recipeService.getRecipes());
 }
+
+// fetchRecipes() {
+//     return this.http.get('https://ng-recipe-http.firebaseio.com/recipes.json',
+//     this.recipeService.getRecipes());
+// }
 
 }
