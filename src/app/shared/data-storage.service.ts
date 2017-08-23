@@ -13,13 +13,13 @@ constructor(private http: Http,
             private authService: AuthService) {} 
 
 storeRecipes() {
-    const token = this.authService.getToken();
+    const token = this.authService.getTokenForUser();
     return this.http.put('https://ng-recipe-http.firebaseio.com/recipes.json?auth=' + token, 
     this.recipeService.getRecipes());
 }
 
 fetchRecipes() {
-    const token = this.authService.getToken();
+    const token = this.authService.getTokenForUser();
         
     this.http.get('https://ng-recipe-http.firebaseio.com/recipes.json?auth=' + token)
         .map(
